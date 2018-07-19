@@ -1,10 +1,10 @@
-uuid: a85d6200-6f36-486d-b3be-9b3aabf687f8
+uuid: 7506581e-377d-45d5-b2a2-fbe3b69874f0
 langcode: en
 status: true
 dependencies:
   config:
     - search_api.index.test_index
-    - views.view.product_view
+    - views.view.duplicate_of_product_view
   module:
     - search_api
 id: term_1
@@ -14,7 +14,7 @@ weight: 0
 min_count: 1
 show_only_one_result: false
 field_identifier: field_term_1
-facet_source_id: 'search_api:views_page__product_view__page_1'
+facet_source_id: 'search_api:views_page__duplicate_of_product_view__page_1'
 widget:
   type: checkbox
   config:

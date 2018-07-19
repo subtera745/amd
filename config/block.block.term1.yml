@@ -1,4 +1,4 @@
-uuid: b7f8274e-6301-455e-bcf9-14eb3ed24d51
+uuid: 13f0fba6-24a3-4b9a-b81d-3a866739b081
 langcode: en
 status: true
 dependencies:
@@ -6,13 +6,12 @@ dependencies:
     - facets.facet.term_1
   module:
     - facets
-    - system
   theme:
     - bartik
 id: term1
 theme: bartik
 region: sidebar_first
-weight: -7
+weight: 0
 provider: null
 plugin: 'facet_block:term_1'
 settings:
@@ -21,9 +20,4 @@ settings:
   provider: facets
   label_display: visible
   block_id: term1
-visibility:
-  request_path:
-    id: request_path
-    pages: /product-view-test-infinite
-    negate: false
-    context_mapping: {  }
+visibility: {  }

@@ -77,12 +77,7 @@
             "webroot/profiles/contrib/{$name}": ["type:drupal-profile"],
             "webroot/themes/contrib/{$name}": ["type:drupal-theme"],
             "webroot/sites/all/drush/contrib/{$name}": ["type:drupal-drush"]
-        },
-        "patches": {
-            "drupal/facets":{
-                "facet ajax fix": "https://www.drupal.org/files/issues/2018-07-05/2826449-181.patch"
-            },
-        },
+        }
     },
     "config": {
            "platform": {
