@@ -1,0 +1,9 @@
+uuid: bc039e24-6180-453c-bc9d-a2d904582e72
+langcode: en
+status: true
+dependencies: {  }
+name: 'Vocabulary 1'
+vid: vocabulary_1
+description: 'List of terms for Vocabulary 1'
+hierarchy: 0
+weight: 0

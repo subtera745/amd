@@ -1,0 +1,17 @@
+uuid: fb417453-0457-4beb-b3c5-dd5f9b197114
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: test_server
+name: 'test server'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  partial_matches: false
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

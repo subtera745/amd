@@ -1,0 +1,124 @@
+uuid: 77f9f360-f4ee-42e0-8628-b1cf00c84231
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_1
+    - field.storage.node.field_term_2
+    - field.storage.node.field_product_image
+    - field.storage.node.field_product_link
+    - search_api.server.test_server
+  module:
+    - search_api
+    - node
+    - taxonomy
+id: test_index
+name: 'test index'
+description: ''
+read_only: false
+field_settings:
+  field_term_1:
+    label: 'Term 1'
+    datasource_id: 'entity:node'
+    property_path: field_term_1
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_term_1
+  field_term_2:
+    label: 'Term 2'
+    datasource_id: 'entity:node'
+    property_path: field_term_2
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_term_2
+  field_product_image:
+    label: product_image
+    datasource_id: 'entity:node'
+    property_path: field_product_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_product_image
+  field_product_link:
+    label: product_link
+    datasource_id: 'entity:node'
+    property_path: field_product_link
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_product_link
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+  name:
+    label: Name
+    datasource_id: 'entity:taxonomy_term'
+    property_path: name
+    type: string
+  tid:
+    label: 'Term ID'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: tid
+    type: integer
+  tid_1:
+    label: 'Term ID'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: tid
+    type: integer
+  vid:
+    label: Vocabulary
+    datasource_id: 'entity:taxonomy_term'
+    property_path: vid
+    type: string
+  vid_1:
+    label: Vocabulary
+    datasource_id: 'entity:taxonomy_term'
+    property_path: vid
+    type: string
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - product
+    languages:
+      default: true
+      selected: {  }
+  'entity:taxonomy_term':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  rendered_item: {  }
+  hierarchy:
+    fields:
+      field_term_1: taxonomy_term-parent
+      field_term_2: taxonomy_term-parent
+    weights:
+      preprocess_index: -45
+  aggregated_field: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: test_server

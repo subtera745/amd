@@ -1,0 +1,23 @@
+uuid: 3db915a4-e5f4-4434-9813-08b1a83a6226
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.term_2
+  module:
+    - facets
+  theme:
+    - bartik
+id: term2
+theme: bartik
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'facet_block:term_2'
+settings:
+  id: 'facet_block:term_2'
+  label: 'Term 2'
+  provider: facets
+  label_display: visible
+  block_id: term2
+visibility: {  }

@@ -22,7 +22,14 @@
         "drupal/core": "~8.0",
         "drush/drush": "~8.0",
         "drupal/console": "~1.0",
-        "drupal/admin_toolbar": "^1.0"
+        "drupal/admin_toolbar": "^1.0",
+        "drupal/linked_field": "^1.1",
+        "drupal/facets": "^1.0",
+        "drupal/search_api": "^1.7",
+        "drupal/semanticviews": "^2.2",
+        "drupal/views_fieldsets": "^3.3",
+        "drupal/views_infinite_scroll": "^1.5",
+        "drupal/draggableviews": "^1.0"
     },
     "require-dev": {
         "drupal/coder": "^8.2",
@@ -70,6 +77,17 @@
             "webroot/profiles/contrib/{$name}": ["type:drupal-profile"],
             "webroot/themes/contrib/{$name}": ["type:drupal-theme"],
             "webroot/sites/all/drush/contrib/{$name}": ["type:drupal-drush"]
-        }
-    }
+        },
+        "patches": {
+            "drupal/facets":{
+                "facet ajax fix": "https://www.drupal.org/files/issues/2018-07-05/2826449-181.patch"
+            },
+        },
+    },
+    "config": {
+           "platform": {
+               "php": "7.1.18",
+               "ext-gd": "1"
+           }
+       }
 }

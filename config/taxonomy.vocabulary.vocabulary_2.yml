@@ -1,0 +1,9 @@
+uuid: 297543dd-4828-4ac7-8c19-a236ae44b712
+langcode: en
+status: true
+dependencies: {  }
+name: 'Vocabulary 2'
+vid: vocabulary_2
+description: 'List of terms for Vocabulary 2'
+hierarchy: 0
+weight: 0

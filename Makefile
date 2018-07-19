@@ -149,6 +149,12 @@ export-prod: # Export production tarball
 	  ${LABLE_BASE}-{php,web,db}:latest \
 	  memcached:1.5-alpine
 
+import-db: # Import a db
+	cat $(filter-out $@,$(MAKECMDGOALS)) | bin/drush sqlc
+
+export-db: # Export a db tp ./backupDatabase
+	bin/drush sql-dump > ./databaseBackup/${PROJECT}.sql
+
 ##
 # Drupal specific commands
 # The following commands are used to strap and control Drupal.

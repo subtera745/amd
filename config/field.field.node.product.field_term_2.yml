@@ -1,0 +1,29 @@
+uuid: 126a0674-1c94-4ca0-8164-521a4b1e1380
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_2
+    - node.type.product
+    - taxonomy.vocabulary.vocabulary_2
+id: node.product.field_term_2
+field_name: field_term_2
+entity_type: node
+bundle: product
+label: 'Term 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      vocabulary_2: vocabulary_2
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
